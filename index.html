@@ -9170,7 +9170,7 @@ Error message and password prompt
 <div created="20161202041124758" creator="R" modified="20211204072932813" modifier="Riz" title="$:/status/UserName">
 <pre>미원</pre>
 </div>
-<div list="[[가비아에서 제공하는 무료 홈페이지 서비스]] [[스마트패드 종류별 장단점]] [[블로그 오픈]]" title="$:/StoryList">
+<div list="$:/temp/search [[가비아에서 제공하는 무료 홈페이지 서비스]] [[스마트패드 종류별 장단점]] [[블로그 오픈]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20161110021006012" modified="20161110021418805" title="$:/temp/advancedsearch">
@@ -9190,8 +9190,35 @@ Error message and password prompt
     }
 }</pre>
 </div>
-<div created="20161110020943137" creator="Riz" modified="20211204071753206" modifier="Riz" title="$:/temp/search">
-<pre></pre>
+<div created="20161110020943137" creator="Riz" modified="20211204120904539" modifier="미원" title="$:/temp/search">
+<pre>&lt;p&gt;찾고자 하는 내용을 3문자이상 입력해주세요. 엔터키 혹은 return키를 누르지 않아도 검색결과가 자동으로 표시됩니다.&lt;/p&gt;
+&lt;$set name=&quot;searchTiddler&quot; value=&quot;$:/temp/menubarsearch&quot;&gt;
+
+&lt;span style=&quot;margin: 0 0.5em;&quot;&gt;
+
+&lt;$edit-text tiddler=&lt;&lt;searchTiddler&gt;&gt; tag=&quot;input&quot; type=&quot;search&quot; focusPopup=&quot;$:/state/popup/menubar-search-dropdown&quot; class=&quot;tc-popup-handle tc-menu-show-when-wide&quot; placeholder=&quot;Search...&quot; default=&quot;&quot;/&gt;
+
+&lt;/span&gt;
+
+&lt;$reveal tag=&quot;div&quot; class=&quot;tc-block-dropdown-wrapper&quot; state=&quot;$:/state/popup/menubar-search-dropdown&quot; type=&quot;nomatch&quot; text=&quot;&quot; default=&quot;&quot;&gt;
+
+&lt;div  class=&quot;tc-block-dropdown tc-search-drop-down&quot;&gt;
+
+&lt;$list filter=&quot;[&lt;searchTiddler&gt;get[text]minlength[1]]&quot; emptyMessage=&quot;&quot;&quot;&lt;div class=&quot;tc-search-results&quot;&gt;Type your search terms&lt;/div&gt;&quot;&quot;&quot; variable=&quot;ignore&quot;&gt;
+
+&lt;$list filter=&quot;[&lt;searchTiddler&gt;get[text]minlength{$:/config/Search/MinLength}limit[1]]&quot; emptyMessage=&quot;&quot;&quot;&lt;div class=&quot;tc-search-results&quot;&gt;{{$:/language/Search/Search/TooShort}}&lt;/div&gt;&quot;&quot;&quot; variable=&quot;listItem&quot;&gt;
+
+{{$:/core/ui/SearchResults}}
+
+&lt;/$list&gt;
+
+&lt;/$list&gt;
+
+&lt;/div&gt;
+
+&lt;/$reveal&gt;
+
+&lt;/$set&gt;</pre>
 </div>
 <div created="20161202050918369" creator="Riz" modified="20161202050918369" modifier="Riz" title="$:/temp/tinka/search">
 <pre>$:/themes/ghostwriter/pagination</pre>
