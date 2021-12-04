@@ -133,6 +133,8 @@ Error message and password prompt
 
 <li>$:/core</li>
 
+<li>$:/core/ui/TopBar/menu</li>
+
 <li>$:/favicon.ico</li>
 
 <li>$:/ghostwriter/fonts-online</li>
@@ -154,6 +156,10 @@ Error message and password prompt
 <li>$:/plugins/ahahn/tinka</li>
 
 <li>$:/plugins/tg/ro</li>
+
+<li>$:/plugins/tg/ro/advanced-search-button-style</li>
+
+<li>$:/plugins/tg/ro/publish-button</li>
 
 <li>$:/plugins/tiddlywiki/highlight</li>
 
@@ -178,6 +184,8 @@ Error message and password prompt
 <li>$:/state/tab--86143343</li>
 
 <li>$:/state/tab--959111941</li>
+
+<li>$:/state/tab-1350288642</li>
 
 <li>$:/state/tab-1749438307</li>
 
@@ -7932,6 +7940,20 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div bag="default" created="20161002082547234" creator="Dr. Rizwan Ishak" modified="20211204080705995" modifier="미원" revision="0" tags="$:/irreverent-mudblood/ghostwriter" title="$:/core/ui/TopBar/menu" type="text/vnd.tiddlywiki">
+<pre>&lt;$reveal state=&quot;$:/state/sidebar&quot; type=&quot;nomatch&quot; text=&quot;no&quot; default=&quot;no&quot;&gt;
+&lt;$button set=&quot;$:/state/sidebar&quot; setTo=&quot;no&quot; tooltip={{$:/language/Buttons/HideSideBar/Hint}} aria-label={{$:/language/Buttons/HideSideBar/Caption}} class=&quot;roundbtn&quot;&gt;
+&lt;span&gt;{{$:/core/images/right-arrow}}&lt;/span&gt;
+{{$:/irreverent-mudblood/overlay-sidebar/backgroundstyle}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+&lt;$reveal state=&quot;$:/state/sidebar&quot; type=&quot;match&quot; text=&quot;no&quot; default=&quot;no&quot;&gt;
+&lt;$button set=&quot;$:/state/sidebar&quot; setTo=&quot;yes&quot; tooltip={{$:/language/Buttons/ShowSideBar/Hint}} aria-label={{$:/language/Buttons/ShowSideBar/Caption}} class=&quot;roundbtn&quot;&gt;&lt;span&gt;{{$:/core/images/left-arrow}}&lt;/span&gt;
+{{$:/irreverent-mudblood/overlay-sidebar/backgroundstyle2}}
+&lt;/$button&gt;
+&lt;/$reveal&gt;
+</pre>
+</div>
 <div _canonical_uri="./images/%2524%253A%252Ffavicon.ico" bag="default" created="20161101075016523" modified="20161101075026822" revision="2" title="$:/favicon.ico" type="image/png">
 <pre></pre>
 </div>
@@ -8860,6 +8882,18 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div created="20150519114003182" creator="TonGerner" modified="20211204075634206" modifier="미원" tags="$:/tags/advanced-search-button $:/tags/Stylesheet" title="$:/plugins/tg/ro/advanced-search-button-style" type="text/css">
+<pre>/* Hide advanced search button */
+.tc-image-advanced-search-button.tc-image-button {
+     padding-left: 15px;
+}</pre>
+</div>
+<div created="20170506162930803" creator="TonGerner" list-before="$:/core/ui/TopBar/menu" modified="20211204080703587" modifier="미원" tags="$:/tags/publish-button $:/tags/TopRightBar" title="$:/plugins/tg/ro/publish-button">
+<pre>&lt;$button class=&quot;tc-btn-invisible&quot; tooltip=&quot;Publish read-only&quot;&gt;
+&lt;$action-sendmessage $message=&quot;tm-open-window&quot; $param=&quot;$:/plugins/tg/ro/publish&quot; height=&quot;700px&quot; width=&quot;550px&quot;/&gt;
+{{$:/plugins/tg/ro/images/publish}}
+&lt;/$button&gt;</pre>
+</div>
 <div author="JoaoBolila" bag="default" core-version="&gt;=5.0.0" dependents="" description="Highlight.js: syntax highlighting" list="readme usage license" plugin-type="plugin" revision="0" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.13">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -9091,8 +9125,8 @@ Error message and password prompt
 <div created="20161116075344243" modified="20161116075344243" title="$:/state/popup-$:/state/plugin-info-77467299-$:/plugins/venomspinner/ghostwriter">
 <pre>yes</pre>
 </div>
-<div created="20161110020913251" creator="Riz" modified="20211204074914755" modifier="미원" title="$:/state/sidebar">
-<pre>yes</pre>
+<div created="20161110020913251" creator="Riz" modified="20211204080651105" modifier="미원" title="$:/state/sidebar">
+<pre>no</pre>
 </div>
 <div created="20161110021038606" modified="20161110021413500" title="$:/state/tab--1498284803">
 <pre>$:/core/ui/AdvancedSearch/System</pre>
@@ -9100,26 +9134,29 @@ Error message and password prompt
 <div created="20211204074531292" creator="미원" modified="20211204074534936" modifier="미원" title="$:/state/tab--1936963165">
 <pre>$:/core/ui/TiddlerInfo/Tools</pre>
 </div>
-<div created="20161110021140000" creator="Riz" modified="20211204074509209" modifier="미원" title="$:/state/tab--1963855381">
-<pre>$:/core/ui/ControlPanel/Toolbars</pre>
+<div created="20161110021140000" creator="Riz" modified="20211204080131517" modifier="미원" title="$:/state/tab--1963855381">
+<pre>$:/themes/ghostwriter/options</pre>
 </div>
 <div created="20211204074450682" creator="미원" modified="20211204074450682" modifier="미원" title="$:/state/tab--2112689675">
 <pre>$:/core/ui/ControlPanel/Advanced</pre>
 </div>
-<div created="20211204071620001" creator="Riz" modified="20211204072639000" modifier="Riz" title="$:/state/tab--86143343">
+<div created="20211204071620001" creator="Riz" modified="20211204080249248" modifier="미원" title="$:/state/tab--86143343">
 <pre>$:/core/ui/ControlPanel/Plugins/Installed/Plugins</pre>
 </div>
 <div created="20211204074453242" creator="미원" modified="20211204074455084" modifier="미원" title="$:/state/tab--959111941">
 <pre>$:/core/ui/ControlPanel/Parsing</pre>
 </div>
-<div created="20161110021134046" creator="Riz" modified="20211204074500449" modifier="미원" title="$:/state/tab-1749438307">
-<pre>$:/core/ui/ControlPanel/Appearance</pre>
+<div created="20211204075624351" creator="미원" modified="20211204080738319" modifier="미원" title="$:/state/tab-1350288642">
+<pre>$:/plugins/tg/ro/save</pre>
+</div>
+<div created="20161110021134046" creator="Riz" modified="20211204080136726" modifier="미원" title="$:/state/tab-1749438307">
+<pre>$:/core/ui/ControlPanel/Plugins</pre>
 </div>
 <div created="20211204070824291" creator="Riz" modified="20211204071756317" modifier="Riz" title="$:/state/tab/moresidebar-401116514">
 <pre>$:/core/ui/MoreSideBar/Shadows</pre>
 </div>
-<div created="20161111182009374" creator="Riz" modified="20211204074916183" modifier="미원" title="$:/state/tab/sidebar--1835078512">
-<pre>$:/core/ui/SideBar/Recent</pre>
+<div created="20161111182009374" creator="Riz" modified="20211204080109493" modifier="미원" title="$:/state/tab/sidebar--1835078512">
+<pre>$:/core/ui/SideBar/More</pre>
 </div>
 <div created="20211204074541821" creator="미원" modified="20211204074612411" modifier="미원" title="$:/state/tabs/controlpanel/toolbars-1345989671">
 <pre>$:/core/ui/ControlPanel/Toolbars/EditToolbar</pre>
@@ -9133,7 +9170,7 @@ Error message and password prompt
 <div created="20161202041124758" creator="R" modified="20211204072932813" modifier="Riz" title="$:/status/UserName">
 <pre>미원</pre>
 </div>
-<div list="$:/Import [[가비아에서 제공하는 무료 홈페이지 서비스]] [[스마트패드 종류별 장단점]] [[블로그 오픈]]" title="$:/StoryList">
+<div list="[[가비아에서 제공하는 무료 홈페이지 서비스]] [[스마트패드 종류별 장단점]] [[블로그 오픈]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20161110021006012" modified="20161110021418805" title="$:/temp/advancedsearch">
@@ -9201,7 +9238,7 @@ button.pages::after {
 &lt;&lt;paginate 12&gt;&gt;
 &lt;/div&gt;</pre>
 </div>
-<div bag="default" created="20161028092007386" creator="venomspinner" modified="20211204072736310" modifier="Riz" revision="0" tags="$:/tags/AboveStory $:/irreverent-mudblood/ghostwriter" title="$:/themes/ghostwriter/Topbar" type="text/vnd.tiddlywiki">
+<div bag="default" created="20161028092007386" creator="venomspinner" modified="20211204080210939" modifier="미원" revision="0" tags="$:/tags/AboveStory $:/irreverent-mudblood/ghostwriter" title="$:/themes/ghostwriter/Topbar" type="text/vnd.tiddlywiki">
 <pre>&lt;$reveal state=&quot;$:/themes/ghostwriter/user/topbarhide&quot; type=&quot;nomatch&quot; text=&quot;hide&quot;&gt;
  &lt;header class=&quot;site-header&quot; style=&quot;text-align:center;&quot;&gt;
             &lt;div class=&quot;container&quot;&gt;
@@ -9214,6 +9251,7 @@ button.pages::after {
 &lt;$reveal state=&quot;$:/themes/ghostwriter/user/contenthide&quot; type=&quot;nomatch&quot; text=&quot;hide&quot;&gt;&lt;$button to=&quot;$:/TableOfContents&quot; class=&quot;site-nav-item tc-btn-invisible&quot;&gt;Contents&lt;/$button&gt;&lt;/$reveal&gt;
 &lt;$reveal state=&quot;$:/themes/ghostwriter/user/abouthide&quot; type=&quot;nomatch&quot; text=&quot;hide&quot;&gt;&lt;$button to=&quot;$:/About&quot; class=&quot;site-nav-item tc-btn-invisible&quot;&gt;About&lt;/$button&gt;&lt;/$reveal&gt;
 &lt;$reveal state=&quot;$:/themes/ghostwriter/user/link&quot; type=&quot;nomatch&quot; text=&quot;hide&quot;&gt;&lt;$button to=&quot;$:/Link&quot; class=&quot;site-nav-item tc-btn-invisible&quot;&gt;Link&lt;/$button&gt;&lt;/$reveal&gt;
+&lt;$reveal state=&quot;$:/themes/ghostwriter/user/link&quot; type=&quot;nomatch&quot; text=&quot;hide&quot;&gt;&lt;$button to=&quot;$:/temp/search&quot; class=&quot;site-nav-item tc-btn-invisible&quot;&gt;Search&lt;/$button&gt;&lt;/$reveal&gt;
 &lt;$list filter=&quot;[![$:/themes/ghostwriter/topbarbtntemplate]tag[$:/themes/ghostwriter/user/topbarbutton]]&quot;&gt;&lt;$transclude/&gt;&lt;/$list&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
