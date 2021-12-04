@@ -153,6 +153,8 @@ Error message and password prompt
 
 <li>$:/plugins/ahahn/tinka</li>
 
+<li>$:/plugins/tg/ro</li>
+
 <li>$:/plugins/tiddlywiki/highlight</li>
 
 <li>$:/plugins/venomspinner/ghostwriter</li>
@@ -8387,9 +8389,7 @@ Error message and password prompt
 <div status="complete" title="$:/Import">
 <pre>다음 티들러를 가져왔습니다:
 
-# [[블로그 오픈]]
-# [[가비아에서 제공하는 무료 홈페이지 서비스]]
-# [[스마트패드 종류별 장단점]]</pre>
+# [[$:/plugins/tg/ro]]</pre>
 </div>
 <div bag="default" revision="0" title="$:/isEncrypted">
 <pre>no</pre>
@@ -8675,6 +8675,191 @@ Error message and password prompt
     }
 }</pre>
 </div>
+<div author="TonGerner" core-version="&gt;=5.1.15" created="20191230135646540" description="Makes TW readonly" list="readme license help" modified="20200318123052819" name="Makes TW readonly" plugin-type="plugin" source="http://tongerner.tiddlyspot.com/" title="$:/plugins/tg/ro" type="application/json" version="0.1.24">
+<pre>{
+    &quot;tiddlers&quot;: {
+        &quot;$:/plugins/tg/ro/advanced-search-button-style&quot;: {
+            &quot;created&quot;: &quot;20150519114003182&quot;,
+            &quot;text&quot;: &quot;/* Hide advanced search button */\n.tc-image-advanced-search-button.tc-image-button {\n     padding-left: 15px;\n}&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/advanced-search-button-style&quot;,
+            &quot;tags&quot;: &quot;$:/tags/advanced-search-button&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191230134649191&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tg/ro/change-settings&quot;: {
+            &quot;created&quot;: &quot;20161108100322449&quot;,
+            &quot;text&quot;: &quot;!!4) Settings\nTo customise the behaviour of TiddlyWiki\n\n{{$:/snippets/viewswitcher}}\n{{$:/plugins/tg/ro/sidebar-layout}}\n{{$:/core/ui/ControlPanel/Settings}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/change-settings&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230134715488&quot;,
+            &quot;caption&quot;: &quot;4. Settings&quot;
+        },
+        &quot;$:/plugins/tg/ro/help&quot;: {
+            &quot;created&quot;: &quot;20140716184603499&quot;,
+            &quot;text&quot;: &quot;!! Help\n\nBefore you 'publish' your ~TiddlyWiki:\n\n# Make a backup of your wiki\n# Get a defined start-up situation for your TW:\n#* Define your starting tiddler(s) in [[$:/DefaultTiddlers]]\n#* If required, define the state of the sidebar tabs\n#* If required create a tiddler (e.g. `xyz`) which transcludes $:/plugins/tg/ro/publish to create another option to return from readonly to edit mode\n#* If required change the keyboard shortut (Ctrl-Shift-Alt-P) for opening $:/plugins/tg/ro/publish via Control Panel &gt; Keyboard Shortcuts\n# Follow the procedure given in  tabs 1 to 5.\n\nThere are a few ways to return from readonly to edit mode:\n\n# Press the configured keyboard shortcut (default Ctrl-Shift-Alt-P), which opens $:/plugins/tg/ro/publish\n# Start the TW with `#xyz` appended which opens $:/plugins/tg/ro/publish\n# Search for:\n#* ''Publish'' to get to $:/plugins/tg/ro/publish\n#* ''~ControlPanel'' to get to ''$:/ControlPanel &gt; Appearance &gt; Publish''\n\n&lt;&lt;&lt;\n''Note:''&lt;br&gt;\n@@.RED Although you can hide the 'Sidebar' and 'Advanced Search' button, they remain 'active'!@@\n&lt;&lt;&lt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/help&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20200318122932944&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;caption&quot;: &quot;Help&quot;
+        },
+        &quot;$:/plugins/tg/ro/hide-sidebar-buttons&quot;: {
+            &quot;created&quot;: &quot;20161108100124814&quot;,
+            &quot;text&quot;: &quot;!! Show/hide sidebar buttons\nUncheck to hide the appropriate sidebar button\n\n|Button |visible |note |h\n|Sidebar button (&lt;&lt;icn $:/core/images/chevron-left&gt;&gt;/&lt;&lt;icn $:/core/images/chevron-right&gt;&gt;) | &lt;$checkbox tiddler=\&quot;$:/core/ui/TopBar/menu\&quot; tag=\&quot;$:/tags/TopRightBar\&quot;/&gt; | 1 |\n|Advanced search button (&lt;&lt;icn $:/core/images/advanced-search-button&gt;&gt;) | &lt;$checkbox tiddler=\&quot;$:/plugins/tg/ro/advanced-search-button-style\&quot; tag=\&quot;$:/tags/Stylesheet\&quot; invertTag=\&quot;yes\&quot;/&gt; | 1 |\n|Publish button  (&lt;&lt;icn $:/plugins/tg/ro/images/publish&gt;&gt;) | &lt;$checkbox tiddler=\&quot;$:/plugins/tg/ro/publish-button\&quot; tag=\&quot;$:/tags/TopRightBar\&quot;/&gt; | 2 |\n\n&lt;&lt;&lt;\n''Note:''\n\n# Although 'invisible' (`display:none;`), ''Sidebar'' and ''Advanced search'' buttons stay active!\n# The ''Publish'' button is invisible and inactive (`$:/tags/TopRightBar` removed)\n&lt;&lt;&lt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/hide-sidebar-buttons&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200316123412336&quot;,
+            &quot;caption&quot;: &quot;3. Sidebar buttons&quot;
+        },
+        &quot;$:/plugins/tg/ro/hide-sidebar-tabs&quot;: {
+            &quot;text&quot;: &quot;\\define check()\n&lt;$checkbox\ntag=\&quot;$:/tags/SideBar\&quot;\nchecked=\&quot;$:/tags/SideBar\&quot;\nunchecked=\&quot;$:/tags/hide\&quot;\ndefault=\&quot;$:/tags/SideBar\&quot;\ncheckactions=\&quot;\&quot;\&quot;&lt;$action-deletefield tags/&gt;&lt;$action-setfield tags=\&quot;$:/tags/SideBar\&quot;/&gt;\&quot;\&quot;\&quot;\nuncheckactions=\&quot;\&quot;\&quot;&lt;$action-deletefield tags/&gt;&lt;$action-setfield tags=\&quot;$:/tags/hide\&quot;/&gt;\&quot;\&quot;\&quot;\n&lt;$link to={{!!title}}&gt;&amp;emsp;\n&lt;$transclude field=\&quot;caption\&quot;&gt;\n&lt;$view field=\&quot;title\&quot;/&gt;\n&lt;/$transclude&gt;\n&lt;/$checkbox&gt;\n\\end\n\n!! Show/hide sidebar tabs\nUncheck to hide the appropriate sidebar tab\n&lt;$list filter=\&quot;[all[shadows+tiddlers]tag[$:/tags/SideBar]]\&quot;&gt;&lt;br&gt;\n&lt;&lt;check&gt;&gt;\n&lt;/$list&gt;\n&lt;$list filter=\&quot;[tag[$:/tags/hide]]\&quot;&gt;&lt;br&gt;\n&lt;&lt;check&gt;&gt;\n&lt;/$list&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/hide-sidebar-tabs&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200319201054427&quot;,
+            &quot;created&quot;: &quot;20161108100017749&quot;,
+            &quot;caption&quot;: &quot;2. Sidebar tabs&quot;
+        },
+        &quot;$:/plugins/tg/ro/hide-toolbar-buttons&quot;: {
+            &quot;created&quot;: &quot;20161108095713019&quot;,
+            &quot;text&quot;: &quot;!! Hide toolbar buttons\n\nDisable in Control panel (Appearance &gt; Toolbars) the buttons you do not need in read-only mode.\n\n''//Disable at least the following buttons://''\n\n* ~ViewToolbar\n** Edit button &lt;&lt;icn $:/core/images/edit-button&gt;&gt;\n** More button &lt;&lt;icn $:/core/images/down-arrow&gt;&gt;\n** Info button &lt;&lt;icn $:/core/images/info-button&gt;&gt; (Tools tab contains button configuration!)\n* Page control buttons\n** New tiddler button &lt;&lt;icn $:/core/images/new-button&gt;&gt;\n** Control panel button &lt;&lt;icn $:/core/images/options-button&gt;&gt;\n** Save button &lt;&lt;icn $:/core/images/save-button&gt;&gt;\n** More button &lt;&lt;icn $:/core/images/down-arrow&gt;&gt;\n\n{{$:/language/ControlPanel/Toolbars/Hint}}\n\n&lt;div class=\&quot;tc-control-panel\&quot;&gt;\n&lt;&lt;tabs \&quot;$:/core/ui/ControlPanel/Toolbars/ViewToolbar $:/core/ui/ControlPanel/Toolbars/PageControls\&quot; \&quot;$:/core/ui/ControlPanel/Toolbars/ViewToolbar\&quot; \&quot;$:/state/tabs/controlpanel/toolbars\&quot; \&quot;tc-vertical\&quot;&gt;&gt;\n&lt;/div&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/hide-toolbar-buttons&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200319203659025&quot;,
+            &quot;caption&quot;: &quot;1. Buttons&quot;
+        },
+        &quot;$:/plugins/tg/ro/icon&quot;: {
+            &quot;created&quot;: &quot;20170322100000766&quot;,
+            &quot;text&quot;: &quot;&lt;svg width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; viewBox=\&quot;0 0 128 128\&quot; xmlns=\&quot;http://www.w3.org/2000/svg\&quot; xmlns:svg=\&quot;http://www.w3.org/2000/svg\&quot;&gt;\n &lt;metadata id=\&quot;metadata7\&quot;&gt;image/svg+xml&lt;/metadata&gt;\n &lt;g&gt;\n  &lt;g stroke=\&quot;null\&quot; id=\&quot;layer1\&quot;&gt;\n   &lt;path stroke=\&quot;#a0a0ff\&quot; d=\&quot;m62.98237,124.8691l-52.98313,-30.489l0,-60.97796l52.98313,-30.48897l52.98313,30.48897l0,60.97796l-52.98313,30.489z\&quot; id=\&quot;path4142\&quot; stroke-miterlimit=\&quot;4\&quot; stroke-width=\&quot;1.2218\&quot; fill=\&quot;#a0a0ff\&quot;/&gt;\n   &lt;g stroke=\&quot;null\&quot; transform=\&quot;matrix(3.659923335400057,0,0,3.647856469142962,20.327076261330674,1218.0946222935067) \&quot; id=\&quot;g4657\&quot;&gt;\n    &lt;path stroke=\&quot;null\&quot; d=\&quot;m3.22135,-313.27808l4.72483,4.70973l10.79962,-10.7651l-4.72483,-4.70973l-10.79962,10.7651zm13.51982,-13.47661l-1.99364,1.98727l4.72409,4.70899l1.99364,-1.98727c0.6766,-0.67444 -0.00001,-1.34889 -0.00001,-1.34889l-3.37088,-3.3601c0,0 -0.6766,-0.67444 -1.3532,0zm-14.18411,14.11637l-0.99229,5.72125l5.7273,-1.00138l-4.735,-4.71987l-0.00001,0z\&quot; id=\&quot;editor_pencil_pen_edit_write_glyph\&quot; fill=\&quot;#000000\&quot;/&gt;\n    &lt;rect stroke=\&quot;null\&quot; stroke-width=\&quot;null\&quot; stroke-linejoin=\&quot;null\&quot; stroke-linecap=\&quot;null\&quot; x=\&quot;-236.34445\&quot; y=\&quot;-219.86093\&quot; width=\&quot;26.11743\&quot; height=\&quot;2.10315\&quot; id=\&quot;svg_1\&quot; transform=\&quot;matrix(0.69825835,0.71584585,-0.71584585,0.69825835,11.119094,-4.6050809) \&quot;/&gt;\n   &lt;/g&gt;\n  &lt;/g&gt;\n &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;type&quot;: &quot;image/svg+xml&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/icon&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230134918451&quot;
+        },
+        &quot;$:/plugins/tg/ro/image-save-button&quot;: {
+            &quot;created&quot;: &quot;20140715185836189&quot;,
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-image-save-button tc-image-button\&quot; viewBox=\&quot;0 0 128 128\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot;&gt;\n    &lt;g fill-rule=\&quot;evenodd\&quot;&gt;\n        &lt;path d=\&quot;M120.78304,34.329058 C125.424287,43.1924006 128.049406,53.2778608 128.049406,63.9764502 C128.049406,99.3226742 99.3956295,127.97645 64.0494055,127.97645 C28.7031816,127.97645 0.0494055385,99.3226742 0.0494055385,63.9764502 C0.0494055385,28.6302262 28.7031816,-0.0235498012 64.0494055,-0.0235498012 C82.8568763,-0.0235498012 99.769563,8.08898558 111.479045,21.0056358 L114.159581,18.3250998 C117.289194,15.1954866 122.356036,15.1939641 125.480231,18.3181584 C128.598068,21.4359957 128.601317,26.5107804 125.473289,29.6388083 L120.78304,34.329058 Z M108.72451,46.3875877 C110.870571,51.8341374 112.049406,57.767628 112.049406,63.9764502 C112.049406,90.4861182 90.5590735,111.97645 64.0494055,111.97645 C37.5397375,111.97645 16.0494055,90.4861182 16.0494055,63.9764502 C16.0494055,37.4667822 37.5397375,15.9764502 64.0494055,15.9764502 C78.438886,15.9764502 91.3495036,22.308215 100.147097,32.3375836 L58.9411255,73.5435552 L41.975581,56.5780107 C38.8486152,53.4510448 33.7746915,53.4551552 30.6568542,56.5729924 C27.5326599,59.6971868 27.5372202,64.7670668 30.6618725,67.8917192 L53.279253,90.5090997 C54.8435723,92.073419 56.8951519,92.8541315 58.9380216,92.8558261 C60.987971,92.8559239 63.0389578,92.0731398 64.6049211,90.5071765 L108.72451,46.3875877 Z\&quot;&gt;&lt;/path&gt;\n    &lt;/g&gt;\n&lt;/svg&gt;&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191230134931683&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/image-save-button&quot;
+        },
+        &quot;$:/plugins/tg/ro/images/publish&quot;: {
+            &quot;created&quot;: &quot;20170322105731731&quot;,
+            &quot;text&quot;: &quot;&lt;svg class=\&quot;tgc-publish-ro tc-image-button\&quot; width=\&quot;22pt\&quot; height=\&quot;22pt\&quot; viewBox=\&quot;0 0 486 438\&quot;&gt;\n&lt;style&gt;\n  .ro {\n    fill:none;\n    stroke-width:40;\n    stroke:#FF00FF;\n  }\n&lt;/style&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m203.2 81.6l-141.6 0 0 311.7 313.3 0 0-139.5\&quot;/&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m176.4 279.6l0-60 188-188 60.5 60.5 -189.5 189.5 -59 0\&quot;/&gt;\n    &lt;path class=\&quot;ro\&quot; d=\&quot;m326.9 69l61.1 61.1\&quot;/&gt;\n&lt;/svg&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/images/publish&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230134946688&quot;
+        },
+        &quot;$:/plugins/tg/ro/license&quot;: {
+            &quot;created&quot;: &quot;20180124175202510&quot;,
+            &quot;text&quot;: &quot;[[Readonly plugin|http://tongerner.tiddlyspot.com/#Readonly%20plugin]] &amp;copy; Ton Gerner &amp;mdash; 2018-2020\n\nMIT License: https://opensource.org/licenses/MIT\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/license&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230135005582&quot;
+        },
+        &quot;$:/plugins/tg/ro/publish&quot;: {
+            &quot;created&quot;: &quot;20140715185723459&quot;,
+            &quot;text&quot;: &quot;!! Readonly plugin\n&lt;&lt;tabs \&quot;$:/plugins/tg/ro/help $:/plugins/tg/ro/hide-toolbar-buttons $:/plugins/tg/ro/hide-sidebar-tabs  $:/plugins/tg/ro/hide-sidebar-buttons $:/plugins/tg/ro/change-settings $:/plugins/tg/ro/save\&quot; \&quot;Help\&quot;&gt;&gt;\n\n\n\n\n\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/publish&quot;,
+            &quot;tags&quot;: &quot;$:/tags/ControlPanel/Appearance&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191230135048784&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;caption&quot;: &quot;Publish&quot;
+        },
+        &quot;$:/plugins/tg/ro/publish-button&quot;: {
+            &quot;created&quot;: &quot;20170506162930803&quot;,
+            &quot;text&quot;: &quot;&lt;$button class=\&quot;tc-btn-invisible\&quot; tooltip=\&quot;Publish read-only\&quot;&gt;\n&lt;$action-sendmessage $message=\&quot;tm-open-window\&quot; $param=\&quot;$:/plugins/tg/ro/publish\&quot; height=\&quot;700px\&quot; width=\&quot;550px\&quot;/&gt;\n{{$:/plugins/tg/ro/images/publish}}\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/publish-button&quot;,
+            &quot;tags&quot;: &quot;$:/tags/publish-button $:/tags/TopRightBar&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191231184447737&quot;,
+            &quot;list-before&quot;: &quot;$:/core/ui/TopBar/menu&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tg/ro/readme&quot;: {
+            &quot;text&quot;: &quot;A plugin to make ~TiddlyWiki read-only.\n\nYou can hide:\n\n* ''All'' toolbar buttons\n* 'Sidebar' button (to switch Sidebar) and 'Advanced search' button (next to Search)\n* All Sidebar tabs tagged with $:/tags/SideBar.\n\nClick the Publish button &lt;&lt;icn $:/plugins/tg/ro/images/publish&gt;&gt; next to the sidebar button &lt;&lt;icn $:/core/images/chevron-left&gt;&gt;/&lt;&lt;icn $:/core/images/chevron-right&gt;&gt; to start making your TW 'publish-ready'.  A new window with six tabs opens. Read the Help tab and follow the 5 steps.\n\n&lt;&lt;&lt;\n''Note:''&lt;br&gt;@@.RED Although you can hide the 'Sidebar' button and 'Advanced Search' button, they remain 'active'!@@\n&lt;&lt;&lt;\n\nThere are a few ways to return from readonly to edit mode, see [[Help|$:/plugins/tg/ro/help]].\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/readme&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20200319200627098&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;,
+            &quot;created&quot;: &quot;20140821172500339&quot;
+        },
+        &quot;$:/plugins/tg/ro/save&quot;: {
+            &quot;created&quot;: &quot;20161108100434387&quot;,
+            &quot;text&quot;: &quot;! Save\n\n{{$:/core/ui/ControlPanel/Saving}}\n\n@@.BLUE ''Save''@@ {{$:/plugins/tg/ro/save-button}}\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/save&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230135228815&quot;,
+            &quot;caption&quot;: &quot;5. Save&quot;
+        },
+        &quot;$:/plugins/tg/ro/save-button&quot;: {
+            &quot;created&quot;: &quot;20170405200808621&quot;,
+            &quot;text&quot;: &quot;&lt;$button message=\&quot;tm-save-wiki\&quot; param={{$:/config/SaveWikiButton/Template}}&gt;\n&lt;span class=\&quot;tc-dirty-indicator\&quot;&gt;\n{{$:/plugins/tg/ro/image-save-button}}\n&lt;/span&gt;\n&lt;/$button&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/save-button&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191230135303043&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tg/ro/sidebar-button-style&quot;: {
+            &quot;created&quot;: &quot;20140715185800387&quot;,
+            &quot;text&quot;: &quot;/* Hide sidebar button */\nsvg.tc-image-chevron-left {\n     display: none;\n}\n\nsvg.tc-image-chevron-right {\n     display: none;\n}\n&quot;,
+            &quot;type&quot;: &quot;text/css&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/sidebar-button-style&quot;,
+            &quot;tags&quot;: &quot;$:/tags/sidebar-button&quot;,
+            &quot;modifier&quot;: &quot;TonGerner&quot;,
+            &quot;modified&quot;: &quot;20191230135322974&quot;,
+            &quot;creator&quot;: &quot;TonGerner&quot;
+        },
+        &quot;$:/plugins/tg/ro/sidebar-layout&quot;: {
+            &quot;created&quot;: &quot;20170307110734575&quot;,
+            &quot;text&quot;: &quot;\\define lingo-base() $:/language/ThemeTweaks/\n\nSidebar layout: &lt;$select tiddler=\&quot;$:/themes/tiddlywiki/vanilla/options/sidebarlayout\&quot;&gt;&lt;option value=\&quot;fixed-fluid\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fixed-Fluid&gt;&gt;&lt;/option&gt;&lt;option value=\&quot;fluid-fixed\&quot;&gt;&lt;&lt;lingo Options/SidebarLayout/Fluid-Fixed&gt;&gt;&lt;/option&gt;&lt;/$select&gt;\n&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/sidebar-layout&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20191230135338759&quot;
+        },
+        &quot;$:/plugins/tg/ro/styles&quot;: {
+            &quot;created&quot;: &quot;20161104132710834&quot;,
+            &quot;text&quot;: &quot;/* Slider style */\n\nhtml .tgc-slider {\n     color: #5778D8;\n     font-weight: bold;\n}\n\n.tgc-slider:hover {\n     color: #5778D8;\n     text-decoration: underline;\n}\n\n.RED {\n     color: red;\n     font-weight: bold;\n}&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/styles&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Stylesheet&quot;,
+            &quot;modified&quot;: &quot;20191230135353718&quot;,
+            &quot;type&quot;: &quot;text/css&quot;
+        },
+        &quot;$:/plugins/tg/ro/macros/doc&quot;: {
+            &quot;created&quot;: &quot;20200316122632179&quot;,
+            &quot;text&quot;: &quot;\\define icn(icon)\n&lt;button class=\&quot;tc-btn-invisible\&quot;&gt; {{$icon$}}&lt;/button&gt;\n\\end&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/macros/doc&quot;,
+            &quot;tags&quot;: &quot;$:/tags/Macro&quot;,
+            &quot;modified&quot;: &quot;20200316123614203&quot;
+        },
+        &quot;$:/plugins/tg/ro/shortcut/publish&quot;: {
+            &quot;created&quot;: &quot;20200317164804429&quot;,
+            &quot;text&quot;: &quot;&lt;$navigator story=\&quot;$:/StoryList\&quot;&gt;\n&lt;$action-navigate $to=\&quot;$:/plugins/tg/ro/publish\&quot;/&gt;\n&lt;/$navigator&gt;&quot;,
+            &quot;title&quot;: &quot;$:/plugins/tg/ro/shortcut/publish&quot;,
+            &quot;tags&quot;: &quot;$:/tags/KeyboardShortcut&quot;,
+            &quot;modified&quot;: &quot;20200317185519894&quot;,
+            &quot;key&quot;: &quot;((publish))&quot;
+        },
+        &quot;$:/config/ShortcutInfo/publish&quot;: {
+            &quot;created&quot;: &quot;20200317164006337&quot;,
+            &quot;text&quot;: &quot;Open Publish window&quot;,
+            &quot;title&quot;: &quot;$:/config/ShortcutInfo/publish&quot;,
+            &quot;tags&quot;: &quot;&quot;,
+            &quot;modified&quot;: &quot;20200317164305031&quot;
+        },
+        &quot;$:/config/shortcuts/publish&quot;: {
+            &quot;created&quot;: &quot;20200317164439679&quot;,
+            &quot;text&quot;: &quot;ctrl-shift-alt-P&quot;,
+            &quot;title&quot;: &quot;$:/config/shortcuts/publish&quot;,
+            &quot;modified&quot;: &quot;20200318102428021&quot;
+        }
+    }
+}</pre>
+</div>
 <div author="JoaoBolila" bag="default" core-version="&gt;=5.0.0" dependents="" description="Highlight.js: syntax highlighting" list="readme usage license" plugin-type="plugin" revision="0" title="$:/plugins/tiddlywiki/highlight" type="application/json" version="5.1.13">
 <pre>{
     &quot;tiddlers&quot;: {
@@ -8948,7 +9133,7 @@ Error message and password prompt
 <div created="20161202041124758" creator="R" modified="20211204072932813" modifier="Riz" title="$:/status/UserName">
 <pre>미원</pre>
 </div>
-<div list="[[가비아에서 제공하는 무료 홈페이지 서비스]] $:/ControlPanel" title="$:/StoryList">
+<div list="$:/Import [[가비아에서 제공하는 무료 홈페이지 서비스]] [[스마트패드 종류별 장단점]] [[블로그 오픈]]" title="$:/StoryList">
 <pre></pre>
 </div>
 <div created="20161110021006012" modified="20161110021418805" title="$:/temp/advancedsearch">
